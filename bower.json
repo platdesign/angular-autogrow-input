@@ -1,6 +1,7 @@
 {
   "name": "angular-autogrow-input",
   "version": "1.0.0",
+  "author":"Christian Blaschke <mail@platdeisgn.de>",
   "description":"angular-autogrow-input",
   "dependencies": {}
 }
