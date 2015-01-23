@@ -29,6 +29,7 @@ ngModule.directive('pdAutogrowInput', function() {
 			element.css('maxWidth', attrs.puElasticInputMaxwidth || defaultMaxWidth);
 
 			function update() {
+
 				angular.forEach([
 					'fontFamily',
 					'fontSize',
@@ -53,18 +54,18 @@ ngModule.directive('pdAutogrowInput', function() {
 
 				mirror.text(element.val() || attrs.placeholder);
 				element.css('width', mirror.outerWidth() + 1);
+
 			}
 
 
-			if (attrs.ngModel) {
-				scope.$watch('model', function () {
-					update();
-				});
-			} else {
-				element.on('keydown keyup focus input propertychange change', function () {
-					update();
-				});
-			}
+			scope.$watch('model', function (a, b) {
+				update();
+			});
+
+			element.on('keydown keyup focus input propertychange change', function () {
+				update();
+			});
+
 
 			scope.$on('pdAutogrowInputUpdate', function() {
 				setTimeout(function() {
@@ -73,7 +74,9 @@ ngModule.directive('pdAutogrowInput', function() {
 			});
 
 			// Initial update
-			update();
+			setTimeout(function() {
+				update();
+			});
 	  }
 	};
 
