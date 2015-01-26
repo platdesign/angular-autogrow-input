@@ -1,8 +1,13 @@
 {
   "name": "angular-autogrow-input",
-  "description":"angular-autogrow-input",
-  "author":"Christian Blaschke <mail@platdeisgn.de>",
+  "description": "angular-autogrow-input",
+  "author": "Christian Blaschke <mail@platdeisgn.de>",
   "version": "1.0.0",
   "dependencies": {},
-  "repository":""
+  "repository": "",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "pd-gulp-js-task": "git://github.com/platdesign/pd-gulp-js-task",
+    "pd-gulp-sass-task": "git://github.com/platdesign/pd-gulp-sass-task"
+  }
 }
